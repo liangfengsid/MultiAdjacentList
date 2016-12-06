@@ -26,5 +26,5 @@ For example:
 spark-submit --conf 'spark.shuffle.blockTransferService=nio' \\
 --conf 'spark.task.executor.binding.enable=true' \\
 --master yarn-client --executor-memory 8g --driver-memory 5g --num-executors 16 \\
---class AdjancentList prefixcount_2.10-1.0.0.jar 2 /edges.txt /adjOutTrue true
+--class AdjancentList AdjacentList.jar 2 /edges.txt /adjOutTrue true
 ```
