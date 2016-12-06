@@ -1,7 +1,7 @@
 ##MultiAdjacentList Benchmark 
 MultiAdjacentList is a graph computing application which generates the heads and tails of lists of various length from the information of edges. In every iteration where a key Li represents a list of length i, we generate a group of new lists of length i+1 by appending each head node and each tail node to it, where each new list acts as the key and its new head nodes and tail nodes act as the value. 
 
-Acknowledge: It is a extension of the "Adjancency-List" benchmark developed by the Faraz Ahmad in Purdue University. 
+Acknowledge: It is a extension of the "Adjacency-List" benchmark developed by the Faraz Ahmad in Purdue University. 
 
 ##Dataset Description:
 Each line of the source dataset is the nodes of two edges, in the format: Vertex1 Vertex2. 
