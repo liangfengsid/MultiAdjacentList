@@ -17,11 +17,14 @@ The compiled package is available at AdjancentList.jar
 The program can be run in Spark with the following command: 
 ```
 spark-submit [spark-related options] \\
---class AdjancentList AdjancentList.jar \<listMaxLength\> \<inputPath\> \<outputPath\> \<isPartitioned\> \\
-\[\<numPartitions\> \<isHead\>\] 
+--class AdjancentList AdjancentList.jar <listMaxLength> <inputPath> <outputPath> <isPartitioned> \\
+[<numPartitions> <isHead>] 
 ```
 
 For example:
 ```
-spark-submit --conf 'spark.shuffle.blockTransferService=nio' --conf 'spark.task.executor.binding.enable=true' --master yarn-client --executor-memory 8g --driver-memory 5g --num-executors 16 --class AdjancentList prefixcount_2.10-1.0.0.jar 2 /edges.txt /adjOutTrue true
+spark-submit --conf 'spark.shuffle.blockTransferService=nio' \\
+--conf 'spark.task.executor.binding.enable=true' \\
+--master yarn-client --executor-memory 8g --driver-memory 5g --num-executors 16 \\
+--class AdjancentList prefixcount_2.10-1.0.0.jar 2 /edges.txt /adjOutTrue true
 ```
